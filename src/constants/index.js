@@ -15,7 +15,7 @@ import {
   threejs,
   chatapp,
   musicapp,
-  netflix,
+  diabetes_predictor,
 } from "../assets";
 
 export const navLinks = [
@@ -24,8 +24,8 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "works",
+    title: "Works",
   },
   {
     id: "contact",
@@ -104,20 +104,41 @@ const projects = [
       "Developed a real-time chat application using MERN stack and Socket.io, enabling seamless instant messaging and live user connectivity.",
     tags: [
       {
-        name: "react",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "MongoDB",
         color: "green-text-gradient",
       },
       {
-        name: "Socket.io",
+        name: "WebSocket",
         color: "pink-text-gradient",
       },
     ],
     image: chatapp,
-    source_code_link: "https://github.com/riyaagrawal-0025/Quick-ChatApp",
+    source_code_link: "https://github.com/riyaagrawal02/Quick-ChatApp",
+  },
+  {
+    name: "Diabetes Predictor",
+    description:
+      "A machine learning project for predicting the likelihood of diabetes in individuals using medical and demographic data.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Machine Learning",
+        color: "green-text-gradient",
+      },
+    ],
+    image: diabetes_predictor,
+    source_code_link: "https://github.com/riyaagrawal02/diabetes-predictor",
   },
   {
     name: "Music Academy",
@@ -138,28 +159,7 @@ const projects = [
       }
     ],
     image: musicapp,
-    source_code_link: "https://github.com/riyaagrawal-0025/musicSchool",
-  },
-  {
-    name: "Netflix-GPT",
-    description:
-      "A Netflix-style web app where users can discover and stream trailers, with GPT integration for smart movie recommendations.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "firebase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: netflix,
-    source_code_link: "https://github.com/riyaagrawal-0025/Netflix-GPT",
+    source_code_link: "https://github.com/riyaagrawal02/musicSchool",
   },
 ];
 

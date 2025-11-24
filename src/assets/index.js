@@ -19,7 +19,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import chatapp from "./img1.png";
 import musicapp from "./img2.png";
-import netflix from "./img3.png"
+import diabetes_predictor from "./diabetes_predictor.png"
 
 export {
   logo,
@@ -43,5 +43,5 @@ export {
   threejs,
   chatapp,
   musicapp,
-  netflix
+  diabetes_predictor
 };
