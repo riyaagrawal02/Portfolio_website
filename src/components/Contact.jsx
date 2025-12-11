@@ -5,6 +5,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
   const formRef = useRef();
@@ -120,6 +121,36 @@ const Contact = () => {
             {loading ? "Sending..." : "Send"}
           </button>
         </form>
+
+        <div className="mt-10 flex gap-6 justify-start items-center">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=riyaagrawal0205@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-red-500 transition-all duration-300"
+          >
+            <FaEnvelope />
+          </a>
+  
+          <a
+            href="https://linkedin.com/in/riya-agrawal02"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-blue-500 transition-all duration-300"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://instagram.com/riya_agrawal0205"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-pink-500 transition-all duration-300"
+          >
+            <FaInstagram />
+          </a>
+        </div>
+
       </motion.div>
 
       <motion.div
