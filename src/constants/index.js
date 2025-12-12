@@ -15,6 +15,7 @@ import {
   threejs,
   chatapp,
   musicapp,
+  automation,
   diabetes_predictor,
 } from "../assets";
 
@@ -45,6 +46,10 @@ const services = [
   {
     title: "Content Creator",
     icon: creator,
+  },
+  {
+    title:"AI & Automation",
+    icon: automation,
   },
 ];
 

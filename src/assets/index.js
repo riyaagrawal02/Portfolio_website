@@ -1,8 +1,9 @@
 import logo from "./me.png";
-import frontend from "./frontend.png";
-import creator from "./creator.png";
+import frontend from "./frontenddev.png";
+import creator from "./contentcreator.png";
 import mobile from "./mobile.png";
-import web from "./web.png";
+import web from "./webdev.png";
+import automation from "./ai&automation.png";
 import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -27,6 +28,7 @@ export {
   creator,
   mobile,
   web,
+  automation,
   github,
   menu,
   close,
