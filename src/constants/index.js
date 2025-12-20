@@ -1,7 +1,9 @@
+
 import {
   frontend,
   creator,
   web,
+  tracker,
   javascript,
   typescript,
   html,
@@ -166,6 +168,24 @@ const projects = [
     image: musicapp,
     source_code_link: "https://github.com/riyaagrawal02/musicSchool",
   },
+  {
+    name: "Real Time Tracking System",
+    description:
+      "A real-time tracking system continuously monitors and displays live location and movement data to enable instant visibility, control, and decision-making.",
+    tags: [
+      {
+        name: "Nodejs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Web Sockets",
+        color: "green-text-gradient",
+      },
+    ],
+    image: tracker,
+    source_code_link: "https://github.com/riyaagrawal02/Real-time_Tracking_System",
+  },
+
 ];
 
 export { services, technologies,projects };

@@ -16,14 +16,17 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.3, 0.75)}
+      initial="hidden"
+      animate="show"
+      style={{ opacity: 1 }}    
+    >
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        tiltReverse={true}
+        glareEnable={false}
+        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full overflow-visible' 
+        
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -66,30 +69,41 @@ const ProjectCard = ({
   );
 };
 
+
 const Works = () => {
+  const [showAll, setShowAll] = React.useState(false);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
+
   return (
-    <>
+    <div className="relative z-10 overflow-visible"> 
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText}`}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
-      <div className='w-full flex'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
-        >
-          The following projects represent my journey in web development and ML, covering real-time chat applications,Music Academy website, and Diabetes Predictor. Each project includes code repositories, showcasing my ability to apply modern technologies, build user-friendly solutions, and deliver practical results.
-        </motion.p>
-      </div>
+      <div className='w-full flex'> <motion.p variants={fadeIn("", "", 0.1, 1)} className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]' > The following projects represent my journey in web development and ML, covering real-time chat applications,Music Academy website, and Diabetes Predictor. Each project includes code repositories, showcasing my ability to apply modern technologies, build user-friendly solutions, and deliver practical results. </motion.p> </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
+      <div 
+        className='mt-20 flex flex-wrap gap-7 overflow-visible '  
+      >
+        {visibleProjects.map((project, index) => (
+          <ProjectCard key={`${project.name}-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+
+      {projects.length > 3 && (
+        <div className="w-full flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="mt-10 text-white bg-[#915EFF] px-6 py-2 rounded-xl hover:bg-[#7a4fd1] transition-all"
+          >
+            {showAll ? "See Less" : "See All Projects"}
+          </button>
+        </div>
+      )}
+    </div>
   );
 };
 
-export default SectionWrapper(Works, "works");
+export default SectionWrapper(() => <Works />, "works");

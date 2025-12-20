@@ -20,14 +20,15 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 import chatapp from "./img1.png";
 import musicapp from "./img2.png";
-import diabetes_predictor from "./diabetes_predictor.png"
-
+import diabetes_predictor from "./diabetes_predictor.png";
+import tracker from "./tracker.png";
 export {
   logo,
   frontend,
   creator,
   mobile,
   web,
+  tracker,
   automation,
   github,
   menu,
