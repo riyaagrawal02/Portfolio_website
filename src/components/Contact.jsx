@@ -150,7 +150,7 @@ const Contact = () => {
             <FaInstagram />
           </a>
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/riyaagrawal02"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white text-3xl hover:text-gray-400 transition-all duration-300"

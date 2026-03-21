@@ -60,6 +60,16 @@ const Navbar = () => {
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
+          <li>
+            <a
+              href="/Riya_CSE.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" text-gray-100 px-4 py-2 rounded-lg font-medium hover:bg-black-100 transition-all duration-300"
+            >
+              Resume
+            </a>
+          </li>
         </ul>
 
         <div className='sm:hidden flex flex-1 justify-end items-center'>
