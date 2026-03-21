@@ -17,6 +17,10 @@ import {
   threejs,
   chatapp,
   musicapp,
+  algoquest,
+  clivra,
+  nutraxia,
+  dineflow,
   automation,
   diabetes_predictor,
 } from "../assets";
@@ -106,25 +110,25 @@ const technologies = [
 
 const projects = [
   {
-    name: "Real time ChatApp",
+    name: "Algoquest",
     description:
-      "Developed a real-time chat application using MERN stack and Socket.io, enabling seamless instant messaging and live user connectivity.",
+      "Learn Data Structures and Algorithms through interactive games, visualizations, and coding challenges.",
     tags: [
       {
         name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
-      {
-        name: "WebSocket",
+        name: "Typescript",
         color: "pink-text-gradient",
       },
+      {
+        name: "Supabase",
+        color: "green-text-gradient",
+      }
     ],
-    image: chatapp,
-    source_code_link: "https://github.com/riyaagrawal02/Quick-ChatApp",
+    image: algoquest,
+    source_code_link: "https://algoquest.riyaagrawal.dev",
   },
   {
     name: "Diabetes Predictor",
@@ -145,7 +149,90 @@ const projects = [
       },
     ],
     image: diabetes_predictor,
-    source_code_link: "https://github.com/riyaagrawal02/diabetes-predictor",
+    source_code_link: "https://dp.riyaagrawal.dev",
+  },
+  {
+    name: "Nutraxia",
+    description:
+      "Build better routines, track your health, and let AI guide your wellness.",
+    tags: [
+      {
+        name: "Nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      }
+    ],
+    image: nutraxia,
+    source_code_link: "https://nutraxia.riyaagrawal.dev",
+  },{
+    name: "DineFlow",
+    description:
+      "DineFlow brings smart dining to your restaurant.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      }
+    ],
+    image: dineflow,
+    source_code_link: "https://dineflow.riyaagrawal.dev",
+  },
+  {
+    name: "Real time ChatApp",
+    description:
+      "Developed a real-time chat application using MERN stack and Socket.io, enabling seamless instant messaging and live user connectivity.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      },
+      {
+        name: "WebSocket",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: chatapp,
+    source_code_link: "https://quickchat.riyaagrawal.dev",
+  },
+  {
+    name: "Clivra",
+    description:
+      "Clivra is a full-stack web application that converts student inputs into an adaptive, explainable daily study plan, continuously adjusted based on progress, confidence, and exam proximity.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Typescript",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "MongoDB",
+        color: "green-text-gradient",
+      }
+    ],
+    image: clivra,
+    source_code_link: "https://clivra.riyaagrawal.dev",
   },
   {
     name: "Music Academy",
@@ -185,7 +272,7 @@ const projects = [
     image: tracker,
     source_code_link: "https://github.com/riyaagrawal02/Real-time_Tracking_System",
   },
-
+  
 ];
 
 export { services, technologies,projects };

@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-import { FaInstagram, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaEnvelope, FaGithub  } from "react-icons/fa";
 
 const Contact = () => {
   const formRef = useRef();
@@ -148,6 +148,14 @@ const Contact = () => {
             className="text-white text-3xl hover:text-pink-500 transition-all duration-300"
           >
             <FaInstagram />
+          </a>
+          <a
+            href="https://github.com/your-username"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white text-3xl hover:text-gray-400 transition-all duration-300"
+          >
+            <FaGithub />
           </a>
         </div>
 

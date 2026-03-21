@@ -21,6 +21,10 @@ import threejs from "./tech/threejs.svg";
 import chatapp from "./img1.png";
 import musicapp from "./img2.png";
 import diabetes_predictor from "./diabetes_predictor.png";
+import algoquest from "./algoquest.png";
+import clivra from "./clivra.png";
+import nutraxia from "./nutraxia.png";
+import dineflow from "./dineflow.png";
 import tracker from "./tracker.png";
 export {
   logo,
@@ -46,5 +50,9 @@ export {
   threejs,
   chatapp,
   musicapp,
+  algoquest,
+  clivra,
+  nutraxia,
+  dineflow,
   diabetes_predictor
 };
