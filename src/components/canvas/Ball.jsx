@@ -1,14 +1,15 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   Decal,
   Float,
   OrbitControls,
-  Preload,
   useTexture,
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
+import useMediaQuery from "../../utils/useMediaQuery";
+import useInView from "../../utils/useInView";
 
 const Ball = (props) => {
   const [decal] = useTexture([props.imgUrl]);
@@ -38,19 +39,25 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
-  return (
-    <Canvas
-      frameloop='demand'
-      dpr={[1, 2]}
-      gl={{ preserveDrawingBuffer: true }}
-    >
-      <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
-      </Suspense>
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const { ref, isVisible } = useInView({ rootMargin: "200px" });
+  const dpr = isMobile ? 1 : [1, 2];
 
-      <Preload all />
-    </Canvas>
+  return (
+    <div ref={ref} className='w-full h-full'>
+      {isVisible ? (
+        <Canvas
+          frameloop='demand'
+          dpr={dpr}
+          gl={{ preserveDrawingBuffer: true }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls enableZoom={false} />
+            <Ball imgUrl={icon} />
+          </Suspense>
+        </Canvas>
+      ) : null}
+    </div>
   );
 };
 
